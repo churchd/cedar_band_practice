@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Songs - Cedar Cross Band</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Cedar Cross Band Practice Songs</h1>
+            <p class="subtitle">Search our practice recording library</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="nav-links">
+                <a href="index.html">&larr; Home</a>
+                <a href="../cgi-bin/browse.cgi">Browse All Songs</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <div class="search-form">
+                <h2>Search Practice Songs</h2>
+                <p>Enter a song title, artist name, or keywords to find practice recordings.</p>
+                
+                <form action="../cgi-bin/search.cgi" method="get">
+                    <div style="margin-bottom: 1rem;">
+                        <label for="query" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Search Terms:</label>
+                        <input type="text" 
+                               id="query" 
+                               name="query" 
+                               class="search-input" 
+                               placeholder="Enter song title or keywords..." 
+                               required 
+                               autocomplete="off">
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Search Options:</label>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <label style="display: flex; align-items: center; font-weight: normal;">
+                                <input type="radio" name="search_type" value="title" checked style="margin-right: 0.5rem;">
+                                Song Title Only
+                            </label>
+                            <label style="display: flex; align-items: center; font-weight: normal;">
+                                <input type="radio" name="search_type" value="all" style="margin-right: 0.5rem;">
+                                Title and Filename
+                            </label>
+                        </div>
+                    </div>
+		    
+		    <div style="margin-top: 0.5rem;">
+		        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Match Type:</label>
+    			<div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        			<label style="display: flex; align-items: center; font-weight: normal;">
+            				<input type="radio" name="match_mode" value="all" checked style="margin-right: 0.5rem;">
+            				All words (AND)
+        			</label>
+        			<label style="display: flex; align-items: center; font-weight: normal;">
+            				<input type="radio" name="match_mode" value="any" style="margin-right: 0.5rem;">
+            				Any word (OR)
+        			</label>
+    			</div>
+		    </div>
+                    
+                    <button type="submit" class="search-button">Search Songs</button>
+                </form>
+            </div>
+
+            <div class="welcome-section">
+                <h3>Search Tips</h3>
+                <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    <li><strong>Partial matches:</strong> Enter part of a song title (e.g., "River" will find "River Of Babylon")</li>
+                    <li><strong>Multiple words:</strong> Use spaces to search for multiple terms (e.g., "love song")</li>
+                    <li><strong>Case insensitive:</strong> Search is not case sensitive ("LOVE" = "love" = "Love")</li>
+                    <li><strong>Quick browse:</strong> Leave search blank and click "Search" to see all songs</li>
+                </ul>
+            </div>
+
+            <div class="recent-section">
+                <h3>Popular Searches</h3>
+                <p>Try searching for these common terms:</p>
+                <div style="margin-top: 1rem;">
+                    <a href="../cgi-bin/search.cgi?query=love&search_type=title" class="nav-button secondary" style="margin: 0.25rem;">Love</a>
+                    <a href="../cgi-bin/search.cgi?query=we&search_type=title" class="nav-button secondary" style="margin: 0.25rem;">We</a>
+                    <a href="../cgi-bin/search.cgi?query=lord&search_type=title" class="nav-button secondary" style="margin: 0.25rem;">Lord</a>
+                    <a href="../cgi-bin/search.cgi?query=Jesus&search_type=title" class="nav-button secondary" style="margin: 0.25rem;">Jesus</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Cedar Cross Band Practice Library | <a href="about.html">About</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,445 @@
+/* Cedar Cross Band Practice Sessions - Main Stylesheet */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Layout containers */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.content-wrapper {
+    min-height: calc(100vh - 120px);
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header-content {
+    padding: 1rem;
+}
+
+.header-image {
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Navigation */
+.nav-links {
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-links a {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 8px 16px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+}
+
+/* Main content sections */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.navigation-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.nav-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e8e8e8;
+}
+
+.nav-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.nav-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.nav-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background: linear-gradient(45deg, #2980b9, #1a5490);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: white;
+}
+
+.nav-button.secondary {
+    background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+}
+
+.nav-button.secondary:hover {
+    background: linear-gradient(45deg, #7f8c8d, #6c7b7d);
+}
+
+/* Recent section */
+.recent-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* Browse page specific styles */
+.browse-header {
+    background: white;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-left: 4px solid #3498db;
+}
+
+.sort-controls {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.sort-controls a {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 6px 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #495057;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.sort-controls a:hover {
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-color: #3498db;
+}
+
+.sort-controls .current-sort {
+    background-color: #2c3e50;
+    color: white;
+    border-color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Song listing styles */
+.song-list {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+.song-item {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.song-item:last-child {
+    border-bottom: none;
+}
+
+.song-item:hover {
+    background-color: #f8f9fa;
+}
+
+.song-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.song-title a {
+    color: #2c3e50;
+    display: block;
+}
+
+.song-title a:hover {
+    color: #3498db;
+}
+
+.song-details {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 0.5rem;
+}
+
+.pagination a, 
+.pagination span {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    color: #495057;
+    background-color: white;
+    transition: all 0.2s ease;
+    min-width: 44px;
+    text-align: center;
+}
+
+.pagination a:hover {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+    text-decoration: none;
+}
+
+.pagination .current {
+    background-color: #2c3e50;
+    color: white;
+    border-color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin: 0;
+    color: #bdc3c7;
+}
+
+footer a {
+    color: #3498db;
+}
+
+footer a:hover {
+    color: #5dade2;
+}
+
+/* Form elements */
+.search-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin: 2rem 0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.search-button {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.search-button:hover {
+    background: linear-gradient(45deg, #2980b9, #1a5490);
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .navigation-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-card {
+        padding: 1.5rem;
+    }
+    
+    .sort-controls a {
+        display: block;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+    }
+    
+    .nav-links a {
+        display: block;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        padding: 1rem 0.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-card {
+        padding: 1rem;
+    }
+    
+    .song-item {
+        padding: 1rem;
+    }
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.hidden {
+    display: none;
+}
