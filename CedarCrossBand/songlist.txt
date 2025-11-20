@@ -1,0 +1,6 @@
+# Cedar Cross Band Song List
+# Format: filename
+# Generated: Wed Oct  1 10:29:03 AM PDT 2025
+10000-reasons.mp3|10000 Reasons|2025-10-01
+Above-All.mp3|Above All|2025-10-01
+Who-Do-You-Say.mp3|Who Do You Say|2025-10-02
