@@ -6,6 +6,7 @@
 #
 # Author: Generated for Cedar Cross Band
 # Date: September 2025
+# Updated: Novemnber 2025 to revise configuration variables to point to practice directory
 #
 # test command line:
 # # Test specific search bash
@@ -20,7 +21,7 @@ use File::Basename;
 
 # Configuration
 my $home_dir = $ENV{HOME} || "/home/churchd";
-my $SONGLIST_FILE = "$home_dir/public_html/CedarCrossBand/songlist.txt";
+my $SONGLIST_FILE = "$home_dir/private_html/CedarCrossBand/songlist.txt";
 my $MP3_BASE_URL = "../CedarCrossBand/mp3s";
 my $CSS_URL = "/~churchd/CedarCrossBand/css/style.css";
 my $SONGS_PER_PAGE = 25;

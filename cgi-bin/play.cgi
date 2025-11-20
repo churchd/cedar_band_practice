@@ -4,7 +4,8 @@
 # Validates requested file exists in database and serves with proper headers
 #
 # Author: Generated for Cedar Cross Band
-# Date: September 2025
+# Create Date: September 2025
+# Updated: November 2025 to revise configuration variables to point to practice directory
 #
 
 use strict;
@@ -14,8 +15,8 @@ use File::Basename;
 
 # Configuration
 my $home_dir = $ENV{HOME} || "/home/churchd";
-my $SONGLIST_FILE = "$home_dir/public_html/CedarCrossBand/songlist.txt";
-my $MP3_DIR = "$home_dir/public_html/CedarCrossBand/mp3s";
+my $SONGLIST_FILE = "$home_dir/private_html/CedarCrossBand/songlist.txt";
+my $MP3_DIR = "$home_dir/private_html/CedarCrossBand/mp3s";
 
 # CGI object
 my $cgi = CGI->new;
